@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BLE-Project</string>
+    <string name="Button_Scan_Start">Start</string>
+    <string name="Button_Scan_IP">Scanning</string>
+    <string name="Button_Scan_Stop">Stop</string>
+
+    <string name="Name">Name</string>
+    <string name="Address">Address</string>
+    <string name="Alias">Alias</string>
+    <string name="UUIDS">UUID</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="nrf_switch">NRF Only</string>
+    <string name="nrf_only">NRF Only</string>
+    <string name="beacon">beacon</string>
+    <string name="text">Text</string>
+    <string name="BeaconName">Beacon Name</string>
+    <string name="BeaconInterval">Interval</string>
+    <string name="BeaconRSSI">RSSI</string>
+    <string name="BeaconFrames">Frames Count</string>
+
+</resources>

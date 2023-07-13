@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BLE-Project</string>
+    <string name="Button_Scan_Start">Start</string>
+    <string name="Button_Scan_IP">Skanowanie</string>
+    <string name="Button_Scan_Stop">Stop</string>
+    <string name="Name">Nazwa</string>
+    <string name="Address">Adres</string>
+    <string name="Alias">Alias</string>
+    <string name="UUIDS">UUID</string>
+    <string name="menu_refresh">Odśwież</string>
+    <string name="nrf_switch">Tylko NRF</string>
+    <string name="nrf_only">Tylko NRF</string>
+    <string name="beacon">beacon</string>
+    <string name="text">Text</string>
+    <string name="BeaconName">Nazwa Beacon\'a</string>
+    <string name="BeaconInterval">Interwał</string>
+    <string name="BeaconRSSI">RSSI</string>
+    <string name="BeaconFrames">Liczba Ramek</string>
+</resources>
