@@ -1,4 +1,4 @@
-,# Bluetooth device scanner - android app
+# Bluetooth device scanner - android app
 
 Android app for discovering bluetooth devices.
 
