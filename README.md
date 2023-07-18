@@ -23,3 +23,7 @@ Stored devices can be deleted by swiping down screen.
 <p align="center"><img src="./screens/detail_view.png"/></p>
 <p align="center">Figure 3 Detail view of discovered/scanned device</p>
 
+# Further Development
+
+* Add tests
+* Connect to discovered ble device
