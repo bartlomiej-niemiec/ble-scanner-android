@@ -10,6 +10,7 @@ import com.example.ble_project.data.convertInterval
 
 
 class ScanCallback(private val dataSource: DataSource) : ScanCallback() {
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onScanResult(callbackType: Int, result: ScanResult) {
         super.onScanResult(callbackType, result)

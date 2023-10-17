@@ -16,6 +16,13 @@ private const val permissionNotGrantedMsg: String = "Permission not Granted"
 /* Class provides checks and prompt for required Bluetooth permission for application. */
 class Permissions(private val activity: AppCompatActivity) {
 
+
+    private val requiredPermissions = arrayOf(
+        Manifest.permission.BLUETOOTH_SCAN,
+        Manifest.permission.BLUETOOTH_CONNECT,
+        Manifest.permission.ACCESS_COARSE_LOCATION
+    )
+
     private val requestSinglePermissionLauncher =
         activity.registerForActivityResult(
             ActivityResultContracts.RequestPermission()
@@ -33,19 +40,24 @@ class Permissions(private val activity: AppCompatActivity) {
 
     @RequiresApi(Build.VERSION_CODES.S)
     fun checkRequiredBlePermissions() : Boolean {
-        return (checkPermisssion(Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_GRANTED)
-                && (checkPermisssion(Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED)
+        for (permission in this.requiredPermissions ){
+            if (checkPermisssion(permission) != PackageManager.PERMISSION_GRANTED)
+            {
+                return false
+            }
+        }
+        return true
     }
 
     @RequiresApi(Build.VERSION_CODES.S)
     fun requestRequiredBlePermissions(): Boolean {
 
-        requestSinglePermissionLauncher.launch(
-            Manifest.permission.BLUETOOTH_SCAN
-        )
-        requestSinglePermissionLauncher.launch(
-            Manifest.permission.BLUETOOTH_CONNECT
-        )
+        for (permission in this.requiredPermissions ){
+            requestSinglePermissionLauncher.launch(
+                permission
+            )
+        }
+
         return checkRequiredBlePermissions()
     }
 

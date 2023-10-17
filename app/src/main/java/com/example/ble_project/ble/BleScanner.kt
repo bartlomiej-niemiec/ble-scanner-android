@@ -29,7 +29,6 @@ class BleScanner(bleAdapter: BluetoothAdapter) {
         scanning.value = false
         this.bleScanner = bleAdapter.bluetoothLeScanner
         handler.post(object: Runnable {
-            @SuppressLint("MissingPermission")
             override fun run() {
                 //Check if bluetooth is enabled
                 if (!bleAdapter.isEnabled) {
@@ -55,7 +54,6 @@ class BleScanner(bleAdapter: BluetoothAdapter) {
         bleScanner?.stopScan(callBack)
     }
 
-    @SuppressLint("MissingPermission")
     fun delayScanning(time: Long) {
         val SCAN_PERIOD: Long = if (time > 0) time else DEFAULT_SCAN_PERIOD
         if (scanning.value == false) {
